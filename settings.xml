@@ -1,7 +1,7 @@
 <settings>
 <servers>
   <server>
-    <id>nextwork-nextwork-devops-cicd</id>
+    <id>nextwork-devops-capstone-cicd-codeartifact-domain-nextwork-devops-capstone-cicd-codeartifact-repository</id>
     <username>aws</username>
     <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
   </server>
@@ -9,14 +9,14 @@
 
 <profiles>
   <profile>
-    <id>nextwork-nextwork-devops-cicd</id>
+    <id>nextwork-devops-capstone-cicd-codeartifact-domain-nextwork-devops-capstone-cicd-codeartifact-repository</id>
     <activation>
       <activeByDefault>true</activeByDefault>
     </activation>
     <repositories>
       <repository>
-        <id>nextwork-nextwork-devops-cicd</id>
-        <url>https://nextwork-211125690527.d.codeartifact.eu-west-1.amazonaws.com/maven/nextwork-devops-cicd/</url>
+        <id>nextwork-devops-capstone-cicd-codeartifact-domain-nextwork-devops-capstone-cicd-codeartifact-repository</id>
+        <url>https://nextwork-devops-capstone-cicd-codeartifact-domain-211125690527.d.codeartifact.us-east-1.amazonaws.com/maven/nextwork-devops-capstone-cicd-codeartifact-repository/</url>
       </repository>
     </repositories>
   </profile>
@@ -24,9 +24,9 @@
 
 <mirrors>
   <mirror>
-    <id>nextwork-nextwork-devops-cicd</id>
-    <name>nextwork-nextwork-devops-cicd</name>
-    <url>https://nextwork-211125690527.d.codeartifact.eu-west-1.amazonaws.com/maven/nextwork-devops-cicd/</url>
+    <id>nextwork-devops-capstone-cicd-codeartifact-domain-nextwork-devops-capstone-cicd-codeartifact-repository</id>
+    <name>nextwork-devops-capstone-cicd-codeartifact-domain-nextwork-devops-capstone-cicd-codeartifact-repository</name>
+    <url>https://nextwork-devops-capstone-cicd-codeartifact-domain-211125690527.d.codeartifact.us-east-1.amazonaws.com/maven/nextwork-devops-capstone-cicd-codeartifact-repository/</url>
     <mirrorOf>*</mirrorOf>
   </mirror>
 </mirrors>
