@@ -62,7 +62,7 @@ Resources:
                     - "codebuild:BatchPutCodeCoverages"
                  Effect: "Allow"
          Roles:
-            - "codebuild-nextwork-devops-capstone-cicd-service-role"
+            - "codebuild-nextwork-devops-capstone-cicd-service-role-v2"
          Users: []
    CodeArtifactRepositoryRepositorynextworknextworkdevopscapstonecicd:
       UpdateReplacePolicy: "Delete"
@@ -158,8 +158,8 @@ Resources:
                  Action: "sts:GetServiceBearerToken"
                  Effect: "Allow"
          Roles:
-            - "codebuild-nextwork-devops-capstone-cicd-service-role"
-            - "ec2-instance-nextwork-cicd"
+            - "codebuild-nextwork-devops-capstone-cicd-service-role-v2"
+            - "ec2-instance-nextwork-cicd-v2"
          Users: []
    IAMRoleAWSCodeDeployRole:
       UpdateReplacePolicy: "Delete"
@@ -170,7 +170,7 @@ Resources:
          ManagedPolicyArns:
             - "arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole"
          MaxSessionDuration: 3600
-         RoleName: "AWSCodeDeployRole"
+         RoleName: "AWSCodeDeployRole-v2"
          Description:
             "Allows CodeDeploy to call AWS services such as Auto Scaling on\
             \ your behalf."
@@ -191,7 +191,7 @@ Resources:
          # ManagedPolicyArns:
          #   - Ref: "IAMManagedPolicyPolicycodeartifactnextworkconsumerpolicy"
          MaxSessionDuration: 3600
-         RoleName: "ec2-instance-nextwork-cicd"
+         RoleName: "ec2-instance-nextwork-cicd-v2"
          Description: "Allows EC2 instances to call AWS services on your behalf."
          AssumeRolePolicyDocument:
             Version: "2012-10-17"
@@ -222,7 +222,7 @@ Resources:
                     - "logs:PutLogEvents"
                  Effect: "Allow"
          Roles:
-            - "codebuild-nextwork-devops-capstone-cicd-service-role"
+            - "codebuild-nextwork-devops-capstone-cicd-service-role-v2"
          Users: []
    CodeArtifactRepositoryRepositorynextworkmavencentralstore:
       UpdateReplacePolicy: "Delete"
@@ -291,7 +291,7 @@ Resources:
       Properties:
          Path: "/service-role/"
          MaxSessionDuration: 3600
-         RoleName: "codebuild-nextwork-devops-capstone-cicd-service-role"
+         RoleName: "codebuild-nextwork-devops-capstone-cicd-service-role-v2"
          AssumeRolePolicyDocument:
             Version: "2012-10-17"
             Statement:
@@ -323,5 +323,5 @@ Resources:
                     - "codeconnections:UseConnection"
                  Effect: "Allow"
          Roles:
-            - "codebuild-nextwork-devops-capstone-cicd-service-role"
+            - "codebuild-nextwork-devops-capstone-cicd-service-role-v2"
          Users: []
