@@ -84,7 +84,7 @@ Resources:
       Type: "AWS::CodeStarConnections::Connection"
       DeletionPolicy: "Delete"
       Properties:
-         ConnectionName: "nextwork-devops-capstone-cicd"
+         ConnectionName: "nextwork-devops-github"
          ProviderType: "GitHub"
          Tags: []
    CodeArtifactDomainDomainnextwork:
