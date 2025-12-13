@@ -73,7 +73,7 @@ Resources:
             - Fn::GetAtt:
                  - "CodeArtifactRepositoryRepositorynextworkmavencentralstore"
                  - "Name"
-         RepositoryName: "nextwork-devops-capstone-cicd"
+         RepositoryName: "nextwork-devops-capstone-cicd-codeartifact-repository"
          Description: "Repository for Nextwork CI/CD artifacts"
          DomainName:
             Fn::GetAtt:
@@ -84,7 +84,7 @@ Resources:
       Type: "AWS::CodeStarConnections::Connection"
       DeletionPolicy: "Delete"
       Properties:
-         ConnectionName: "nextwork-devops-github"
+         ConnectionName: "nextwork-devops-capstone-cicd"
          ProviderType: "GitHub"
          Tags: []
    CodeArtifactDomainDomainnextwork:
@@ -92,7 +92,7 @@ Resources:
       Type: "AWS::CodeArtifact::Domain"
       DeletionPolicy: "Delete"
       Properties:
-         DomainName: "nextwork"
+         DomainName: "nextwork-devops-capstone-cicd-codeartifact-domain"
    S3BucketNextworkdevopscapstonecicdbouaro:
       UpdateReplacePolicy: "Delete"
       Type: "AWS::S3::Bucket"
